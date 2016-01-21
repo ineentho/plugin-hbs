@@ -6,5 +6,5 @@ const handlebarsRuntimePath = System.normalizeSync('handlebars/handlebars.runtim
 
 export function translate(load) {
   var precompiled = Handlebars.precompile(load.source);
-  load.source = `module.exports = require('${handlebarsRuntimePath}').template(${precompiled});`;
+  load.source = `module.exports = require('handlebars/handlebars.runtime').template(${precompiled});`;
 }
